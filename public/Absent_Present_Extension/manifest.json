@@ -1,0 +1,14 @@
+{
+  "name": "Browsing Browser",
+  "version": "1.0",
+  "description": "Browsing Browser tweets when it sees you get up or leave from the computer",
+  "permissions": [],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+
+  },
+  "manifest_version": 2
+}
