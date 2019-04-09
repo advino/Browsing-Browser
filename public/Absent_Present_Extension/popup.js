@@ -83,7 +83,7 @@ const createModel = async (video) => {
           }
         });
       }
-    },1);
+    },500);
   });
 }
 
