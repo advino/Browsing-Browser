@@ -61,7 +61,6 @@ const createModel = async (video) => {
 
                   let snap = snapshot(video);
                   let snapMessage = snap.toDataURL();
-                  console.log(snapMessage);
                   tweet("returned", snapMessage);
                 } else {
                 }
@@ -76,7 +75,6 @@ const createModel = async (video) => {
 
                   let snap = snapshot(video);
                   let snapMessage = snap.toDataURL();
-                  console.log(snapMessage);
                   tweet("left", snapMessage);
                 } else {
                 }
@@ -88,21 +86,6 @@ const createModel = async (video) => {
     },1);
   });
 }
-
-// const tweet = (status) => {
-//   const xhr = new XMLHttpRequest();
-//   let url = `https://b283c524.ngrok.io/presence/${status}`;
-//   xhr.responseType = 'json';
-//
-//   xhr.onreadystatechange = () => {
-//     if(xhr.readState == 4) {
-//       console.log(xhr.response);
-//     }
-//   }
-//
-//   xhr.open('GET', url, true);
-//   xhr.send();
-// }
 
 const tweet = (status, img) => {
   const xhr = new XMLHttpRequest();
@@ -140,5 +123,7 @@ const snapshot = (video) => {
 createVideo().then(createModel);
 
 window.onunload = e => {
-  tweet("left");
+  let snap = snapshot(video);
+  let snapMessage = snap.toDataURL();
+  tweet("left", snapMessage);
 }
