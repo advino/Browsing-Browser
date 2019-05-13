@@ -6,8 +6,8 @@ const createVideo = () => {
     video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
-    video.setAttribute('width', 320);
-    video.setAttribute('height', 240);
+    video.setAttribute('width', 640);
+    video.setAttribute('height', 480);
     videoContainer.appendChild(video);
     video.style.display = 'none';
 
